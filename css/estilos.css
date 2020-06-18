@@ -1,35 +1,126 @@
+/* reset do css*/
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
 body{
-    background: rgb(94, 185, 129);
-    background-size: auto 100vh;
-    font-family: Arial;
-    height: 100vh;
+  background: rgb(94, 185, 129);
+  background-size: auto 100vh;
+  font-family: 'Roboto', sans-serif;
+  height: 100vh;
+  font-size: 16px;
+}
+
+@media (min-width: 400px){
+  body{
+    font-size: 18px;
   }
+}
+
+@media (min-width: 1024px){
+  body{
+    font-size: 20px;
+  }
+}
+
+header {
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
   
-  .menu{
-    background-color: white;
-  }
+.menu{
+  background-color: white;
+  position: fixed;
+  width: 100vw;
+  top: 0;
+}
+
+.menu a {
+  display: block;
+  padding: 9px 20px;
+}
   
-  .menu ul {
-    display: flex;
-    justify-content: space-around;
-  }
+.menu ul {
+  display: flex;
+  justify-content: space-around;
+}
   
-  .menu li {
-    list-style: none;
-  }
+.menu li {
+  list-style: none;
+}
   
-  a {
-    color: teal;
-    text-decoration: none;
-  }
+a {
+  color: teal;
+  text-decoration: none;
+}
   
-  a:hover {
-    text-decoration: underline;
-  }
+a:hover {
+  text-decoration: underline;
+  background-color: rgb(38, 161, 161);
+  color: rgb(164, 255, 243);
+}
   
 .site-subtitle,
 .site-title {
-    text-align: center;
-    color: whitesmoke;
+  text-align: center;
+  color: whitesmoke;
 }
+
+.site-title {
+  font-size: 4em;
+  font-family: 'Major Mono Display', monospace;
+}
+
+.site-subtitle{
+  font-family: 'DM Mono', monospace;
+  line-height: 2.5em;
+}
+
+.Projetos{
+  padding: 2em;
+}
+
+.Projetos h2{
+  font-family: 'Major Mono Display', monospace;
+  margin-bottom: 2em;
+}
+
+.Projetos .grid {
+  display: grid;
+  gap: 1.5em;
+}
+
+@media (min-width:575px) {
+  .Projetos .grid {
+    grid-template-columns: 240px 240px;
+  }
+}
+
+@media (min-width:836px) {
+  .Projetos .grid {
+    grid-template-columns: repeat(3, 240px);
+    justify-content: center;
+    align-content: center;
+    height: calc(100vh - 2em - 30px - 2em);
+  }
+}
+
+.Projetos figure {
+  text-align: center;
+}
+
+.img-portfolio {
+  width: 240px;
+  height: 240px;
+  object-fit: cover;
   
+}
+
+.img-portfolio:hover {
+  width: 245px;
+  height: 245px;
+}
