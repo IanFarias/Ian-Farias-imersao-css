@@ -42,6 +42,13 @@ header {
 .menu a {
   display: block;
   padding: 9px 20px;
+  transition: background-color 2s, color 2s;
+}
+
+.menu a:hover{
+  background-color: rgb(38, 161, 161);
+  color: rgb(164, 255, 243);
+
 }
   
 .menu ul {
@@ -60,8 +67,7 @@ a {
   
 a:hover {
   text-decoration: underline;
-  background-color: rgb(38, 161, 161);
-  color: rgb(164, 255, 243);
+
 }
   
 .site-subtitle,
@@ -79,11 +85,12 @@ a:hover {
   font-family: 'DM Mono', monospace;
   line-height: 2.5em;
 }
-
+.contato,
 .Projetos{
   padding: 2em;
+  min-height: 100vh;
 }
-
+.contato h2,
 .Projetos h2{
   font-family: 'Major Mono Display', monospace;
   margin-bottom: 2em;
@@ -91,7 +98,7 @@ a:hover {
 
 .Projetos .grid {
   display: grid;
-  gap: 1.5em;
+  gap: 2em;
 }
 
 @media (min-width:575px) {
@@ -105,7 +112,7 @@ a:hover {
     grid-template-columns: repeat(3, 240px);
     justify-content: center;
     align-content: center;
-    height: calc(100vh - 2em - 30px - 2em);
+    height: calc(100vh - 4em - 30px - 2em);
   }
 }
 
@@ -117,10 +124,56 @@ a:hover {
   width: 240px;
   height: 240px;
   object-fit: cover;
-  
 }
 
 .img-portfolio:hover {
   width: 245px;
   height: 245px;
+}
+
+.contato a{
+  color: whitesmoke;
+  font-size: 4em;
+}
+
+.contato a:hover{
+  text-decoration: none;
+  text-shadow: 0px 0px 10px rgba(255, 255, 255, 0.616); 
+}
+
+.contato .grid-icons{
+  display: grid;
+  text-align: center;
+}
+
+@media (min-width:300px) {
+  .contato .grid-icons{
+    grid-template-columns: 1;
+    justify-content: center;
+
+  }
+}
+
+@media (min-width:550px) {
+  .contato .grid-icons{
+    grid-template-columns: repeat(2, 8em);
+  }
+}
+
+@media (min-width: 735px) {
+  .contato .grid-icons{
+    grid-template-columns: repeat(3, 8em);
+  }
+}
+
+@media (min-width:1000px) {
+  .contato .grid-icons{
+    grid-template-columns: repeat(4,8em);
+  }
+}
+
+@media (min-width:1336px) {
+  .contato .grid-icons{
+    grid-template-columns: repeat(5,8em);
+  }
 }
