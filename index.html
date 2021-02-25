@@ -9,9 +9,9 @@
 	<title>Ian Farias</title>
 </head>
 <body>
-  <header>
+	<header>
 		<nav class="menu">
-			<ul>
+			<ul class="container">
 				<li><a href="#sobre">Sobre</a></li>
 				<li><a href="#projetos">Projetos</a></li>
 				<li><a href="#contato">Contato</a></li>
@@ -21,33 +21,79 @@
 			<h1 class="site-title">Ian Farias </h1>
 			<h2 class="site-subtitle">Jr. front-end developer</h2>
 		</div>
-  </header>
-	<section class="Projetos" id="projetos">
+	</header>
+	<section class="sobre container" id="sobre">
+		<h2>Sobre</h2>
+
+		<figure class="profile">
+			<img src="https://pbs.twimg.com/profile_images/1205624456967790593/SxkXTYSG_400x400.jpg" alt="Ian Farias Paixão">
+		</figure>
+		<p>
+			Lorem ipsum dolor, sit amet consectetur adipisicing elit. Possimus dolorem architecto rem placeat quasi soluta quas officia illo tempora? Saepe modi neque tenetur corrupti at molestias nam voluptatum expedita quaerat.
+		</p>
+		<p>
+			Lorem ipsum dolor, sit amet consectetur adipisicing elit. In a, ut pariatur, officiis aliquid architecto suscipit, beatae recusandae sapiente incidunt obcaecati excepturi accusantium? Ipsum temporibus odit impedit optio illo rerum.
+		</p>
+		<p>
+			Lorem ipsum, dolor sit amet consectetur adipisicing elit. Iusto dolorem, perspiciatis atque cupiditate ipsam doloremque perferendis dignissimos ut, minima omnis pariatur quisquam facilis iste explicabo at, laborum reprehenderit cum eligendi!
+		</p>
+		<p>
+			Este site foi contruído durante a <a href="https://www.alura.com.br/imersao-css" target="_blank">Imersão CSS Alura.</a>
+		</p>
+	</section>
+	<section class="Projetos container" id="projetos">
 		<h2>Projetos</h2>
 
 		<div class="grid">
-		<figure>
-			<img class="img-portfolio" src="./img/lingfrontend.png" alt="Projetos Front-end">
-			<figcaption>Projetos Front-end</figcaption>
-		</figure>
-		<figure>
-			<img class="img-portfolio" src="./img/mobile-creditos-nate-grant-unsplash.jpg" alt=">Mobile">
-			<figcaption>Mobile</figcaption>
-		</figure>
-		<figure>
-			<img class="img-portfolio" src="./img/webdesign-creditos-domenico-loia-unsplash.jpg" alt="Web design">
-			<figcaption>Web design</figcaption>
-		</figure>
-		<figure>
-			<img class="img-portfolio" src="./img/desenvolvedor-web.png"
-				alt="Projetos pessoais">
-			<figcaption>Projetos pessoais</figcaption>
-		</figure>
+			<div class="flip-card">
+				<div class="card">
+					<figure class="card-front">
+						<img class="img-portfolio" src="./img/javascript-html-css.png" alt="Projetos Front-end">
+						<figcaption>Projetos Front-end</figcaption>
+					</figure>
+					<div class="card-back">
+						Parte de trás :)
+					</div>
+				</div>
+			</div>
+			<div class="flip-card">
+				<div class="card">
+					<figure class="card-front">
+						<img class="img-portfolio" src="./img/mobile-creditos-nate-grant-unsplash.jpg" alt=">Mobile">
+						<figcaption>Mobile</figcaption>
+					</figure>
+					<div class="card-back">
+						Parte de trás :)
+					</div>
+				</div>
+			</div>
+			<div class="flip-card">
+				<div class="card">
+					<figure class="card-front">
+						<img class="img-portfolio" src="./img/webdesign-creditos-domenico-loia-unsplash.jpg" alt="Web design">
+						<figcaption>Web design</figcaption>
+					</figure>
+					<div class="card-back">
+						Parte de trás :)
+					</div>
+				</div>
+			</div>
+			<div class="flip-card">
+				<div class="card">
+					<figure class="card-front">
+						<img class="img-portfolio" src="./img/desenvolvedor-web.png" alt="Projetos pessoais">
+						<figcaption>Projetos pessoais</figcaption>
+					</figure>
+					<div class="card-back">
+						Parte de trás :)
+					</div>
+				</div>
+			</div>
 		</div>
 	</section>
-	<section id="contato" class="contato">
+	<section class="contato container" id="contato">
 		<h2>Contato</h2>
-		
+			
 		<div class="grid-icons">
 			<a href="https://github.com/IanFarias" target="_blank">
 				<i class="fab fa-github"></i>
@@ -67,5 +113,4 @@
 		</div>
 	</section>
 </body>
-
 </html>
