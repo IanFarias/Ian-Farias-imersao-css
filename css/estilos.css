@@ -6,19 +6,21 @@
 }
 
 body{
-  background: rgb(94, 185, 129);
+  background: rgb(184, 208, 193);
   background-size: auto 100vh;
   font-family: 'Roboto', sans-serif;
   height: 100vh;
   font-size: 16px;
 }
 
+/* breakpoint */
 @media (min-width: 400px){
   body{
     font-size: 18px;
   }
 }
 
+/* breakpoint */
 @media (min-width: 1024px){
   body{
     font-size: 20px;
@@ -74,7 +76,7 @@ a:hover {
 .site-subtitle,
 .site-title {
   text-align: center;
-  color: whitesmoke;
+  color: rgb(62, 53, 53);
 }
 
 .site-title {
@@ -88,12 +90,12 @@ a:hover {
 }
 
 .sobre,
-.contato,
 .Projetos{
   padding: 2em;
   min-height: 100vh;
 }
 
+/* breakpoint */
 @media(min-width: 1200px){
   .container{
     max-width: 1200px;
@@ -120,21 +122,48 @@ a:hover {
   color:teal;
 }
 
-.sobre .profile{
-  float: right;
-  margin-left: 2em;
+/* breakpoint */
+@media(min-width: 330px){
+  .sobre .profile-image img{
+    height: 275px;
+    width: 275px;
+  }
 }
 
-.sobre .profile img{
+/* breakpoint */
+@media(min-width: 490px){
+  .sobre .profile-image img{
+      height: 400px;
+      width: 400px;
+      float: right;
+      margin-left: 20em;
+  }
+}
+
+/* breakpoint */
+@media(min-width: 830px){
+  .sobre .profile-image img{
+      height: 400px;
+      width: 400px;
+      float: right;
+      margin-left: 2em;
+  }
+}
+
+.sobre .profile-image img{
   clip-path: polygon(50% 0%, 83% 12%, 100% 43%, 94% 78%, 68% 100%, 32% 100%, 6% 78%, 0% 43%, 17% 12%);
 }
 
 .sobre p{
-  font-family: 'Major Mono Display', monospace;
+  font-family: 'DM mono', monospace;
   text-indent: 1.4em;
   margin-bottom: 1.4em;
   line-height: 1.4em;
   text-align: justify;
+}
+
+.sobre .english{
+  font-weight: 700;
 }
 
 .Projetos .grid {
@@ -142,18 +171,28 @@ a:hover {
   gap: 3em;
 }
 
-@media (min-width:575px) {
-  .Projetos .grid {
+/* breakpoint */
+@media(min-width:608px){
+  .Projetos .grid{
     grid-template-columns: 240px 240px;
+    justify-content: center;
+    align-content: center;
+    /* height: calc(100vh - 8em - 60px);   */
+    height: 100vh;
+    background-color: black;
+    color:white;
   }
 }
 
-@media (min-width:836px) {
+/* breakpoint */
+@media (min-width:920px) {
   .Projetos .grid {
     grid-template-columns: repeat(3, 240px);
     justify-content: center;
     align-content: center;
-    height: calc(100vh - 4em - 60px - 2em);
+    /* height: calc(100vh - 4em - 60px - 2em); */
+    height: calc(100vh - 8em - 60px);
+  
   }
 }
 
@@ -168,10 +207,6 @@ a:hover {
   transition: transform 0.5s;
 }
 
-/* .img-portfolio:hover {
-  transform:scale(1.3);
-}  */
-
 .flip-card{
   perspective: 500px;
   height: 240px;
@@ -179,7 +214,6 @@ a:hover {
 }
 
 .card {
-  background-color: red;
   position: relative;
   transform-style: preserve-3d;
   transition: transform 1s;
@@ -206,6 +240,18 @@ a:hover {
 
 }
 
+.card-back a{
+  transform: translateY(+400%);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.contato{
+  padding: 2em;
+  min-height: 50vh;
+}
+
 .contato a{
   color: whitesmoke;
   font-size: 4em;
@@ -223,6 +269,7 @@ a:hover {
   text-align: center;
 }
 
+/* breakpoint */
 @media (min-width:300px) {
   .contato .grid-icons{
     grid-template-columns: 1;
@@ -231,26 +278,17 @@ a:hover {
   }
 }
 
-@media (min-width:550px) {
+/* breakpoint */
+@media (min-width:580px) {
   .contato .grid-icons{
-    grid-template-columns: repeat(2, 8em);
+    grid-template-columns: repeat(4, 6em);
   }
 }
 
+/* breakpoint */
 @media (min-width: 735px) {
   .contato .grid-icons{
-    grid-template-columns: repeat(3, 8em);
+    grid-template-columns: repeat(4, 8em);
   }
 }
 
-@media (min-width:1000px) {
-  .contato .grid-icons{
-    grid-template-columns: repeat(4,8em);
-  }
-}
-
-@media (min-width:1336px) {
-  .contato .grid-icons{
-    grid-template-columns: repeat(5,8em);
-  }
-}
