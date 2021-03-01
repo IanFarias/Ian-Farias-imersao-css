@@ -177,24 +177,42 @@ a:hover {
     grid-template-columns: 240px 240px;
     justify-content: center;
     align-content: center;
-    /* height: calc(100vh - 8em - 60px);   */
     height: 100vh;
-    background-color: black;
-    color:white;
+    color:rgb(255, 255, 255);
   }
 }
 
+@media(min-width:608px)
+  and (min-height:320px){
+    .Projetos .grid{
+      height: max-content;
+    }
+}
+
 /* breakpoint */
-@media (min-width:920px) {
+@media (min-width:920px)
+    and (min-height:840px) {
   .Projetos .grid {
     grid-template-columns: repeat(3, 240px);
     justify-content: center;
     align-content: center;
-    /* height: calc(100vh - 4em - 60px - 2em); */
     height: calc(100vh - 8em - 60px);
-  
+    background-color: black;
   }
 }
+
+@media (min-width:920px)
+    and (min-height:720px)
+    and (max-height:840px) {
+  .Projetos .grid {
+    grid-template-columns: repeat(3, 240px);
+   height: 100vh;
+    /* height: calc(100vh - 4em - 60px - 2em); */
+
+    background-color: black;
+  }
+}
+
 
 .Projetos figure {
   text-align: center;
@@ -234,6 +252,7 @@ a:hover {
 
 .card-back{
   background-color: white;
+  color: black;
   height: 240px;
   width: 100%;
   transform: rotateY(180deg);
